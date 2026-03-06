@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snehit Nimje | Personal Portfolio</title>
+</head>
+
+<body style="font-family: Arial; margin:0; padding:0; line-height:1.6;">
+
+<!-- Header -->
+<header style="background:#222; color:white; padding:30px; text-align:center;">
+<h1>Snehit Nimje</h1>
+<p>Cricket Lover | Gamer | Explorer | Future Tech Enthusiast</p>
+</header>
+
+<!-- About Me -->
+<section style="padding:30px;">
+<h2>About Me</h2>
+
+<p>
+Hello! My name is <b>Snehit Nimje</b>. I am a passionate and curious person who enjoys learning new things and exploring the world around me. 
+I love spending my time playing cricket because it teaches teamwork, focus, and discipline. Cricket is not just a sport for me, 
+it is something that makes me feel energetic and motivated. I also enjoy playing video games, which help me relax and improve my 
+problem-solving skills. Games allow me to experience different challenges and adventures while having fun.
+
+Apart from sports and gaming, I like exploring new ideas, technology, and skills. I enjoy discovering how websites, apps, and digital 
+tools work. Learning about technology inspires me to build things on my own and improve my creativity. I believe that curiosity and 
+continuous learning are important for personal growth. My goal is to keep improving my skills, explore new opportunities, and become 
+a knowledgeable and successful person in the future. This portfolio website is a small step in my journey to share my interests, 
+hobbies, and goals with others.
+</p>
+
+</section>
+
+<!-- Interests -->
+<section style="background:#f4f4f4; padding:30px;">
+<h2>My Interests</h2>
+
+<ul>
+<li>🏏 Playing Cricket and improving my skills</li>
+<li>🎮 Playing exciting video games</li>
+<li>🌍 Exploring new places and ideas</li>
+<li>💻 Learning about technology and websites</li>
+<li>📚 Gaining knowledge and improving myself</li>
+</ul>
+
+</section>
+
+<!-- Hobbies -->
+<section style="padding:30px;">
+<h2>My Hobbies</h2>
+
+<p>
+My hobbies include playing cricket with friends, enjoying different types of video games, watching interesting content about 
+technology, and learning new things on the internet. I also like spending time exploring new topics that help me grow and 
+develop new skills. These hobbies help me stay active, creative, and motivated.
+</p>
+
+</section>
+
+<!-- Goals -->
+<section style="background:#f4f4f4; padding:30px;">
+<h2>My Goals</h2>
+
+<p>
+My goal is to keep learning and improving every day. I want to build my knowledge in technology and create useful things like 
+websites and digital projects. I also want to become better at cricket and maintain a balanced life between sports, learning, 
+and personal growth.
+</p>
+
+</section>
+
+<!-- Contact -->
+<section style="padding:30px;">
+<h2>Contact Me</h2>
+
+<p>Email: <a href="mailto:snehitnimje203@gmail.com">snehitnimje203@gmail.com</a></p>
+<p>Location: India</p>
+
+</section>
+
+<!-- Footer -->
+<footer style="background:#222; color:white; text-align:center; padding:15px;">
+<p>© 2026 Snehit Nimje | Personal Portfolio Website</p>
+</footer>
+
+</body>
+</html>
