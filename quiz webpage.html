@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Knowledge Quiz</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#84fab0);
+background-size:400% 400%;
+animation:bg 10s infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.quiz-box{
+width:450px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+text-align:center;
+color:#fff;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+#question{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.option{
+display:block;
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+background:white;
+color:#333;
+transition:0.3s;
+}
+
+.option:hover{
+background:#ffd369;
+transform:scale(1.05);
+}
+
+#next{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+border-radius:10px;
+background:#00ffae;
+font-size:16px;
+cursor:pointer;
+display:none;
+}
+
+#score{
+margin-top:20px;
+font-size:22px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h1>🧠 GK Quiz</h1>
+
+<div id="question"></div>
+
+<div id="answers"></div>
+
+<button id="next" onclick="nextQuestion()">Next</button>
+
+<div id="score"></div>
+
+</div>
+
+<script>
+
+const quiz = [
+
+{
+q:"What is the capital of India?",
+a:["Mumbai","New Delhi","Kolkata","Chennai"],
+c:1
+},
+
+{
+q:"Which planet is known as the Red Planet?",
+a:["Earth","Mars","Jupiter","Saturn"],
+c:1
+},
+
+{
+q:"Who wrote the national anthem of India?",
+a:["Rabindranath Tagore","Gandhi","Nehru","Subhash Bose"],
+c:0
+},
+
+{
+q:"Largest ocean in the world?",
+a:["Atlantic","Indian","Pacific","Arctic"],
+c:2
+},
+
+{
+q:"Which country invented paper?",
+a:["India","China","Japan","Egypt"],
+c:1
+},
+
+{
+q:"Which is the tallest mountain in the world?",
+a:["K2","Everest","Kangchenjunga","Makalu"],
+c:1
+},
+
+{
+q:"Who is known as the Father of Computer?",
+a:["Charles Babbage","Bill Gates","Alan Turing","Steve Jobs"],
+c:0
+},
+
+{
+q:"Which gas do plants absorb?",
+a:["Oxygen","Carbon Dioxide","Nitrogen","Hydrogen"],
+c:1
+},
+
+{
+q:"Which is the largest desert?",
+a:["Sahara","Gobi","Thar","Arabian"],
+c:0
+},
+
+{
+q:"How many continents are there?",
+a:["5","6","7","8"],
+c:2
+}
+
+];
+
+let index=0;
+let score=0;
+
+const question=document.getElementById("question");
+const answers=document.getElementById("answers");
+const next=document.getElementById("next");
+
+function loadQuestion(){
+
+next.style.display="none";
+
+let q=quiz[index];
+
+question.innerText=q.q;
+
+answers.innerHTML="";
+
+q.a.forEach((text,i)=>{
+
+let btn=document.createElement("button");
+btn.innerText=text;
+btn.classList.add("option");
+
+btn.onclick=()=>selectAnswer(i);
+
+answers.appendChild(btn);
+
+});
+
+}
+
+function selectAnswer(i){
+
+if(i===quiz[index].c){
+score++;
+}
+
+next.style.display="block";
+
+}
+
+function nextQuestion(){
+
+index++;
+
+if(index<quiz.length){
+loadQuestion();
+}else{
+
+document.querySelector(".quiz-box").innerHTML=
+`<h1>Quiz Completed 🎉</h1>
+<h2>Your Score: ${score} / ${quiz.length}</h2>`;
+
+}
+
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
